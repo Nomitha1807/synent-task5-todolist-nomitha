@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pastel To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sparkles -->
+  <div class="sparkles"></div>
+
+  <!-- Sound Effects -->
+  <audio id="addSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7c7f7d6f8a.mp3"></audio>
+  <audio id="doneSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_9a9c4c6c4b.mp3"></audio>
+  <audio id="deleteSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2b2fbbcb41.mp3"></audio>
+
+  <div class="todo-container">
+    <h1>🌸My To-Do List</h1>
+
+    <div class="input-box">
+      <input type="text" id="taskInput" placeholder="Add a cute task ✨">
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

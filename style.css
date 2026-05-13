@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", cursive;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7ff, #fce4ec);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Sparkles */
+.sparkles::before {
+  content: "✨ ✨ ✨ ✨ ✨";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 24px;
+  opacity: 0.3;
+}
+
+.sparkles::after {
+  content: "✨ ✨ ✨ ✨";
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  font-size: 22px;
+  opacity: 0.3;
+}
+
+/* Container */
+.todo-container {
+  background: #ffffffcc;
+  padding: 25px;
+  width: 360px;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.todo-container h1 {
+  color: #6ec6ff;
+  margin-bottom: 15px;
+}
+
+/* Input */
+.input-box {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #b3e5fc;
+  outline: none;
+}
+
+button {
+  background: #81d4fa;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #4fc3f7;
+}
+
+/* Tasks */
+ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+li {
+  background: #f1faff;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.9); }
+  to { transform: scale(1); }
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-actions span {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 18px;
+}
